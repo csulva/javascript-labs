@@ -1,0 +1,29 @@
+footer {
+    color: orange;
+    align-content: center;
+}
+
+body {
+    background-color: purple;
+}
+
+h1 {
+    color: green
+}
+
+h2 {
+    margin-top: auto;
+}
+
+h3 {
+    color: white;
+    text-shadow: hotpink;
+}
+
+h4 {
+    align-items: stretch;
+}
+
+p {
+    text-emphasis-color: black;
+}
