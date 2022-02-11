@@ -25,3 +25,11 @@
  * support for it is not everywhere.
  */
 
+let name = 'Chris';
+let greeting = 'Hello there';
+let friend = 'Tim';
+let familyMember = 'Tony';
+let day = 10;
+let month = 2;
+let year = 2022;
+let age = 29;
