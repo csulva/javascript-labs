@@ -66,4 +66,10 @@ if (age < 5) {
     price += 6
 }
 
-console.log(`Your age is ${age}. You must pay the ${fare} fare. That will be ${price} dollars please.`)
+if (age % 10 == 0) {
+    console.log("Lucky you! Today you get to ride free of charge.")
+} else {
+    console.log(`Your age is ${age}. You must pay the ${fare} fare. That will be ${price} dollars please.`)
+}
+
+
