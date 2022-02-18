@@ -14,3 +14,16 @@
  * find both ways!
  *
  */
+
+// for (let num = 5; num <= 1000; num += 5) {
+//     console.log(num)
+// }
+
+// for (let num = 100; num >= -100; num --) {
+//     console.log(num)
+// }
+// let newNum = 0;
+// for (let num = 0; num <= 5000; num ++) {
+//     console.log(newNum += 3);
+//     console.log(newNum -= 1)
+// }
