@@ -20,5 +20,5 @@
  *
  */
 
-let avgTempInCity = getAvgTemp("Vancouver", "C");
-console.log(avgTempInCity);
+// let avgTempInCity = getAvgTemp("Vancouver", "C");
+// console.log(avgTempInCity);
