@@ -59,3 +59,27 @@ for (let i = 0; i <= 100; i++) {
   randomArray.push(randInt);
 }
 console.log(randomArray[1], randomArray[2]);
+
+let odd = [];
+let even = [];
+for (let elem = 0; elem < randomArray.length; elem ++) {
+  if (randomArray[elem] % 2 === 0) {
+    even.push(randomArray[elem])
+  }
+  else {
+    odd.push(randomArray[elem])
+  }
+}
+console.log(odd[0]);
+console.log(even[0])
+
+function calculateSum(array) {
+  let arraySum = 0;
+  for (let elem = 0; elem < array.length; elem ++) {
+    arraySum += array[elem];
+  }
+  return arraySum;
+}
+
+console.log(calculateSum(odd));
+console.log(calculateSum(even));
