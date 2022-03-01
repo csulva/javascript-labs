@@ -70,3 +70,31 @@ stores =  [
     [ '4003IN', 'Target', 'IN', 'North', 'Attica' ],
     [ '4003KY', 'Target', 'KY', 'North', 'Ashland' ]
 ]
+let code = 0;
+let store_name = 1;
+let state = 2;
+let region = 3;
+let city = 4;
+let quantity = {};
+
+// for (store = 0; store < stores.length; store ++) {
+//     console.log(stores[store][city])
+// }
+// for (store = 0; store < stores.length; store ++) {
+//     if (stores[store][state] === 'CA') {
+//         console.log(stores[store][store_name])
+//     }
+// }
+// let counter = 0;
+// for (store = 0; store < stores.length; store ++) {
+//     if (stores[store][store_name] === 'Target') {
+//         counter += 1;
+//     }
+// }
+for (store = 0; store < stores.length; store ++) {
+    quantity[stores[store][store_name]] = 0;
+}
+for (store = 0; store < stores.length; store ++) {
+    quantity[stores[store][store_name]] += 1;
+}
+console.log(quantity)
