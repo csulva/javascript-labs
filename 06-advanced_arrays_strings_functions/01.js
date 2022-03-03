@@ -59,7 +59,8 @@ function calculateSum(num) {
     sum += num;
     return sum;
 }
-function doCount(counter=0){
+let counter = 0;
+function doCount(){
     counter += 1;
     return counter;
 }
@@ -67,11 +68,10 @@ function doCount(counter=0){
 function getAverage(sum, count) {
     return sum/count;
 }
-let bigSum = 0;
-bigSum = randomNumbers.forEach(calculateSum());
-console.log(bigSum)
-let count2 = 0;
-count2 = randomNumbers.forEach(doCount());
+randomNumbers.forEach(calculateSum);
+console.log(sum)
+randomNumbers.forEach(doCount);
+console.log(counter)
 let avg2 = 0;
-avg2 = randomNumbers.forEach(getAverage(bigSum, count2));
+avg2 = getAverage(sum, counter);
 console.log(avg2);

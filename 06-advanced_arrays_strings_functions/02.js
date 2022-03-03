@@ -985,10 +985,20 @@ expenses.forEach(array => {
 })
 // console.log(totalGroceries)
 
-// 3. Output the total difference in each account after all transactions. So if
+// 3. Output the total difference in each account (credit card) after all transactions. So if
 //    $100 was deposited into the account and $50 spent, then the total change
 //    would be $50.
 
+accounts = {}
+expenses.forEach(array => {
+  if (accounts[array[6]]) {
+    accounts[array[6]] += array[3]
+  }
+  else {
+    accounts[array[6]] = array[3]
+  }
+})
+console.log(accounts)
 
 // 4. Create a new array that only has the date, description, and amount of rows
 //    that have the category "Eating Out".
