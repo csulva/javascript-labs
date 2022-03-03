@@ -13,7 +13,7 @@
  *
  * Remove the first sub array containing headers without manually deleting it.
  * Do you remember the method to remove the first element of an array?
- * 
+ *
  * Then, using forEach and arrow functions:
  *
  * 1. Output the total amount of expenses for 2017 and 2018.
@@ -938,3 +938,82 @@ let expenses = [
     "Bank of America - Credit Card",
   ],
 ];
+
+/* Remove the first sub array containing headers without manually deleting it.
+* Do you remember the method to remove the first element of an array?
+*
+* Then, using forEach and arrow functions:
+*
+* 1. Output the total amount of expenses for 2017 and 2018.
+* 2. Output the total amount paid for Groceries.
+* 3. Output the total difference in each account after all transactions. So if
+*    $100 was deposited into the account and $50 spent, then the total change
+*    would be $50.
+* 4. Create a new array that only has the date, description, and amount of rows
+*    that have the category "Eating Out".
+* 5. Create another array with only the date, description and amount of rows
+*    that have the category "Gear and Clothing".
+*/
+
+expenses.shift()
+
+// 1. Output the total amount of expenses for 2017 and 2018.
+regex2017 = /2017/
+regex2018 = /2018/
+
+let total2017 = 0;
+let total2018 = 0;
+expenses.forEach(array => {
+  if (array[0].match(regex2017)){
+    total2017 += array[3];
+  }
+  else if (array[0].match(regex2018)) {
+    total2018 += array[3]
+  }
+})
+// console.log(total2017)
+// console.log(total2018)
+
+// 2. Output the total amount paid for Groceries.
+
+let groceries = /Groceries/
+let totalGroceries = 0
+expenses.forEach(array => {
+  if (array[2].match(groceries)) {
+    totalGroceries += array[3]
+  }
+})
+// console.log(totalGroceries)
+
+// 3. Output the total difference in each account after all transactions. So if
+//    $100 was deposited into the account and $50 spent, then the total change
+//    would be $50.
+
+
+// 4. Create a new array that only has the date, description, and amount of rows
+//    that have the category "Eating Out".
+
+let eatingOut = [];
+let eatingOutRegex = /Eating Out/;
+let counter = 0;
+
+expenses.forEach(array => {
+  if (array[2].match(eatingOutRegex)) {
+  eatingOut.push([counter += 1, array[0], array[1]])
+  }
+})
+// console.log(eatingOut)
+
+// 5. Create another array with only the date, description and amount of rows
+//    that have the category "Gear and Clothing".
+
+let gearAndClothing = [];
+let gear = /Gear and Clothing/;
+counter = 0;
+
+expenses.forEach(array => {
+  if (array[2].match(gear)) {
+    gearAndClothing.push([counter += 1, array[0], array[1]])
+  }
+})
+console.log(gearAndClothing)
